@@ -20,6 +20,14 @@ public class Post {
     @JoinColumn(name = "author_id", nullable = false)
     private User author;
 
+    // Constructor
+    public Post(Long id, String title, String body, User author) {
+        this.id = id;
+        this.title = title;
+        this.body = body;
+        this.author = author;
+    }
+
     // Getters and setters
     public Long getId() {
         return id;
